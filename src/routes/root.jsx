@@ -45,6 +45,20 @@ export default function Root() {
                     </Form>
                 </div>
                 <nav>
+                    <h2>Events</h2>
+                    <ul>
+                        <li>
+                            <NavLink to={`/events/upcoming`} className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}>
+                                Upcoming Event
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/events/create`} className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}>
+                                Schedule an Event
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <h2>Contacts</h2>
                     {contacts.length ? (
                         <ul>
                             {contacts.map((contact) => (
